@@ -94,14 +94,10 @@ const App = () => {
   const [archivedKegs, setArchivedKegs] = useState([]);
   const [archivedCustomers, setArchivedCustomers] = useState([]);
   const [archivedProducts, setArchivedProducts] = useState([]);
-  });
   const [bulkSelectMode, setBulkSelectMode] = useState(false);
   const [selectedItems, setSelectedItems] = useState([]);
   const [showKegHistory, setShowKegHistory] = useState(null); // keg id to show history for
   const [quickActionMenu, setQuickActionMenu] = useState(false);
-  const [archivedKegs, setArchivedKegs] = useState([]);
-  const [archivedCustomers, setArchivedCustomers] = useState([]);
-  const [archivedProducts, setArchivedProducts] = useState([]);
 
   // Save customers to localStorage whenever they change
   useEffect(() => {
