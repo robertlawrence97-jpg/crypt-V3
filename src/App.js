@@ -89,10 +89,19 @@ const App = () => {
     const saved = localStorage.getItem('kegtracker_activity');
     return saved ? JSON.parse(saved) : [];
   });
+  
+  // Archived state variables
+  const [archivedKegs, setArchivedKegs] = useState([]);
+  const [archivedCustomers, setArchivedCustomers] = useState([]);
+  const [archivedProducts, setArchivedProducts] = useState([]);
+  });
   const [bulkSelectMode, setBulkSelectMode] = useState(false);
   const [selectedItems, setSelectedItems] = useState([]);
   const [showKegHistory, setShowKegHistory] = useState(null); // keg id to show history for
   const [quickActionMenu, setQuickActionMenu] = useState(false);
+  const [archivedKegs, setArchivedKegs] = useState([]);
+  const [archivedCustomers, setArchivedCustomers] = useState([]);
+  const [archivedProducts, setArchivedProducts] = useState([]);
 
   // Save customers to localStorage whenever they change
   useEffect(() => {
@@ -959,7 +968,7 @@ const App = () => {
                       });
                       setKegs([...kegs.filter(k => !selectedItems.includes(k.id))]);
                       setArchivedKegs([...archivedKegs, ...kegs.filter(k => selectedItems.includes(k.id))]);
-                      setSelectedItems(any[]);
+                      setSelectedItems([]);
                     }}
                     className="px-3 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 text-sm font-semibold"
                   >
