@@ -1033,7 +1033,7 @@ const App = () => {
                   </button>
                   <button 
                     onClick={() => {
-                      if (confirm(`Mark ${selectedKegs.length} kegs as lost?`)) {
+                      if (window.confirm(`Mark ${selectedKegs.length} kegs as lost?`)) {
                         processTrans('lost', {});
                       }
                     }}
@@ -1817,7 +1817,7 @@ const App = () => {
                         </button>
                         <button 
                           onClick={() => {
-                            if (confirm(`Permanently delete keg ${keg.id}? This cannot be undone.`)) {
+                            if (window.confirm(`Permanently delete keg ${keg.id}? This cannot be undone.`)) {
                               setArchivedKegs(archivedKegs.filter((_, i) => i !== idx));
                             }
                           }}
@@ -1875,7 +1875,7 @@ const App = () => {
                         </button>
                         <button 
                           onClick={() => {
-                            if (confirm(`Permanently delete customer ${customer.name}? This cannot be undone.`)) {
+                            if (window.confirm(`Permanently delete customer ${customer.name}? This cannot be undone.`)) {
                               setArchivedCustomers(archivedCustomers.filter((_, i) => i !== idx));
                             }
                           }}
@@ -1933,7 +1933,7 @@ const App = () => {
                         </button>
                         <button 
                           onClick={() => {
-                            if (confirm(`Permanently delete product ${product.name}? This cannot be undone.`)) {
+                            if (window.confirm(`Permanently delete product ${product.name}? This cannot be undone.`)) {
                               setArchivedProducts(archivedProducts.filter((_, i) => i !== idx));
                             }
                           }}
