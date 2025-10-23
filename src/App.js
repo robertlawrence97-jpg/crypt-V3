@@ -959,7 +959,7 @@ const App = () => {
                       });
                       setKegs([...kegs.filter(k => !selectedItems.includes(k.id))]);
                       setArchivedKegs([...archivedKegs, ...kegs.filter(k => selectedItems.includes(k.id))]);
-                      setSelectedItems([]);
+                      setSelectedItems(any[]);
                     }}
                     className="px-3 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 text-sm font-semibold"
                   >
