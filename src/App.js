@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Camera, Package, Truck, Users, BarChart3, Search, Plus, MapPin, AlertCircle, Check, X, Edit, Trash2, Save, Barcode, Home, FileText, Clock, DollarSign, TrendingUp, Filter, Download, Calendar, Wrench, Bell, TrendingDown, Archive, RefreshCw, Shield, Activity, Target, Layers } from 'lucide-react';
+import { Camera, Package, Truck, Users, BarChart3, Search, Plus, MapPin, AlertCircle, Check, X, Edit, Trash2, Save, QrCode, Home, FileText, Clock, DollarSign, TrendingUp, Filter, Download, Calendar, Wrench, Bell, TrendingDown, Archive, RefreshCw, Shield, Activity, Target, Layers, Cloud, Upload } from 'lucide-react';
 
 // Enhanced initial data with more realistic brewery operations
 const initialKegs = [
@@ -1131,7 +1131,7 @@ const App = () => {
                     <p className="text-gray-600">📍 {k.location}</p>
                     <p className="text-gray-600">📏 {k.size}</p>
                     <p className="text-gray-600">
-                      <Barcode size={14} className="inline mr-1" />
+                      <QrCode size={14} className="inline mr-1" />
                       {k.barcode || 'No barcode'}
                     </p>
                     {k.customer && (
@@ -1158,7 +1158,7 @@ const App = () => {
                         className="flex-1 px-3 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 font-semibold flex items-center justify-center gap-1"
                         title="Scan/Edit Barcode"
                       >
-                        <Barcode size={16} />
+                        <QrCode size={16} />
                         Barcode
                       </button>
                       <button 
